@@ -1,41 +1,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-    <TextView android:id="@+id/textview"
+    android:id="@+id/tela"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pegaNome" 
-        android:textSize="18sp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:layout_marginTop="10dp"     
-    />   
-    <RelativeLayout android:id="@+id/relativeLayout1"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"> 
+        android:text="@string/pegaNome"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
         <EditText
-            android:layout_alignParentLeft="true"
-            android:hint="@string/Digite"
             android:id="@+id/editText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/skipButton"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_toLeftOf="@+id/skipButton" >
+            android:hint="@string/Digite"
+            android:inputType="textPersonName" >
         </EditText>
-   
-        <Button android:text="@string/Navegador"
-                 android:id="@+id/skipButton"
-                 android:textSize="18sp"
-                 android:layout_marginTop="10dp"
-                 android:layout_alignParentRight="true"
-                 android:layout_height="wrap_content"
-                 android:layout_width="wrap_content"
-                 android:onClick="getfile" >
-         </Button>
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:onClick="getfile"
+            android:text="@string/Navegador"
+            android:textSize="18sp" >
+        </Button>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/skipButton"
+            android:layout_marginTop="44dp"
+            android:layout_weight="0.07"
+            android:src="@drawable/ic_launcher" />
+
     </RelativeLayout>
+
+    
+
 </LinearLayout>
